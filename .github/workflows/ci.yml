@@ -1,0 +1,17 @@
+name: TWS CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Print Hello (test step)
+        run: echo "Workflow is working!"
